@@ -1,25 +1,141 @@
-# Virtual environment
-venv/
-.venv/
+# ============================================================
+# Sentinel
+# AI Infrastructure Investigation & Safe Remediation
+# ============================================================
 
-# Environment variables
-.env
-
-# Python cache
+# ------------------------------------------------------------
+# Python
+# ------------------------------------------------------------
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+*.so
 
-# IDE
+# ------------------------------------------------------------
+# Virtual Environments
+# ------------------------------------------------------------
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ------------------------------------------------------------
+# Environment Variables & Secrets
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# API keys / credentials
+*.key
+*.pem
+*.crt
+credentials.json
+service-account.json
+token.json
+
+# ------------------------------------------------------------
+# Streamlit
+# ------------------------------------------------------------
+.streamlit/secrets.toml
+.streamlit/cache/
+
+# ------------------------------------------------------------
+# ChromaDB / Vector Stores
+# Generated locally and can be recreated from the knowledge base
+# ------------------------------------------------------------
+chroma_db/
+chroma/
+*.sqlite
+*.sqlite3
+*.db
+
+# ------------------------------------------------------------
+# AI / ML Generated Artifacts
+# ------------------------------------------------------------
+models/
+model_cache/
+checkpoints/
+artifacts/
+
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# Hugging Face / Transformers cache
+.cache/
+.huggingface/
+transformers_cache/
+
+# ------------------------------------------------------------
+# Jupyter
+# ------------------------------------------------------------
+.ipynb_checkpoints/
+
+# ------------------------------------------------------------
+# Testing / Coverage
+# ------------------------------------------------------------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+
+# ------------------------------------------------------------
+# Logs
+# ------------------------------------------------------------
+*.log
+logs/
+
+# ------------------------------------------------------------
+# Local Runtime / Temporary Files
+# ------------------------------------------------------------
+tmp/
+temp/
+temporary/
+outputs/
+results/
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------
+# Python Packaging
+# ------------------------------------------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# ------------------------------------------------------------
+# IDEs / Editors
+# ------------------------------------------------------------
 .vscode/
 .idea/
+*.iml
+*.code-workspace
 
-# ChromaDB
-chroma_db/
-.chroma/
-
-# Logs
-*.log
-
-# OS
+# ------------------------------------------------------------
+# Operating System
+# ------------------------------------------------------------
 .DS_Store
 Thumbs.db
+Desktop.ini
+
+# ------------------------------------------------------------
+# Local Development Files
+# ------------------------------------------------------------
+*.local
+*.local.*git add .gitignore
